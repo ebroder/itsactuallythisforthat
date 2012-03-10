@@ -1,0 +1,9 @@
+{
+    "name": "itsactuallythisforthat",
+    "version": "0.0.1",
+    "dependencies": {
+        "backbone": "0.9.1",
+        "coffee-script": "1.2.0",
+        "express": "2.5.8"
+    }
+}
