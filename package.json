@@ -5,5 +5,9 @@
         "backbone": "0.9.1",
         "coffee-script": "1.2.0",
         "express": "2.5.8"
-    }
+    },
+    "licenses":  [
+        {"type": "GPLv2+",
+         "url": "http://www.gnu.org/licenses/gpl-2.0.html"}
+    ]
 }
