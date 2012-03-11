@@ -39,3 +39,4 @@ class Startup extends Backbone.Model
                                 catch err
                                         return error err),
                         error
+exports.Startup = Startup
