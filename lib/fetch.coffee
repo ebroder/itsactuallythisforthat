@@ -1,4 +1,4 @@
-http = require('http')
+http = require 'http'
 
 exports.get = (options, cb, error) ->
         response = ""

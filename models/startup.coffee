@@ -1,5 +1,5 @@
-fetch = require('../lib/fetch')
-Backbone = require('backbone')
+fetch = require '../lib/fetch'
+Backbone = require 'backbone'
 
 class Startup extends Backbone.Model
         initialize: ->
