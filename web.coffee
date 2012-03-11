@@ -17,21 +17,33 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 02110-1301 USA.
 ###
 
-backbone = require('backbone')
-express = require('express')
+Backbone = require 'backbone'
+express = require 'express'
+less = require 'less'
+fs = require 'fs'
+mkdirp = require 'mkdirp'
+path = require 'path'
 
 app = express.createServer()
 
 app.configure ->
+        app.set 'views', path.join __dirname, 'views'
+        app.set 'view engine', 'jade'
+
+        app.use express.favicon()
         app.use express.logger()
         app.use express.bodyParser()
         app.use express.cookieParser()
         app.use express.methodOverride()
+        app.use express.static path.join __dirname, 'generated'
 
 app.configure 'development', ->
         app.use express.errorHandler
                 dumpExceptions: true
                 showStack: true
+
+app.get '/', (req, res) ->
+        res.render 'index.jade'
 
 port = process.env.PORT || 3000
 app.listen port, ->
